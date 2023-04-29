@@ -1,7 +1,6 @@
 fn solution(s: String) -> String {
-    println!("Solution {}", s);
     let mut i = 0;
-    let mut j = s.len();
+    let j = s.len();
 
     if j == 0 {
         return s.to_string();
@@ -16,13 +15,11 @@ fn solution(s: String) -> String {
             let mut c = s.chars();
             if c.nth(k) != c.nth(j - k) {
                 is_palim = false;
-                j -= 1;
             }
 
             if i >= j || k < j {
                 break;
             }
-
         }
 
         if is_palim {
